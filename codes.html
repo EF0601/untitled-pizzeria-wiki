@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File-reader</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <div id="navbar">
+      <button>File-reader v1.1.0</button>
+      <button>Untitled Pizzeria Wiki: Codes</button>
+      <button onclick="sizePlus()">+</button>
+      <button class="size-display">15</button>
+      <button onclick="sizeMinus()">-</button>
+    </div>
+  </div>
+  <div class="content">
+    <h1>Codes:</h1>
+    <p>This help page is being edited constantly, so make sure to come back every so often. Want to help out? Make edits on our github page! Simply create a new branch and pull request. Our team will periodically check the edits and approve or disapprove them. <a href="https://github.com/EF0601/untitled-pizzeria-wiki" style="color:blue;" target="_blank">GitHub</a></p><br><br>
+    <h2>Content</h2>
+    <p>Codes are starter packs for your game. Each game <b>ONLY</b> permits one code to be used. After one code is used, the codes input is locked and has a gray underline. <br> Active codes can be found occasionally after each release, usually hidden in the notes and will generally expire after several releases. However, two codes are open forever:
+<ul>
+<li>"Enter code for THIS game." (+100 coins; +5 pizzas) A general easter egg.</li>
+<li>"0.2.0-alpha" (+40 coins; +2 pizzas, +4 dough, +4 toppings, +4 sauce) A tribute to the beginnings of codes.</li>
+</ul>
+</p>
+    <button onclick="location.reload()">Reload File</button>
+  </div>
+
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: monospace;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  /* Navbar links */
+  #navbar button {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    background-color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border: none;
+    font-family: monospace;
+  }
+
+  #navbar button:hover {
+    background-color: yellowgreen;
+    color: black;
+  }
+
+  /* Page content */
+  .content {
+    padding: 16px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky+.content {
+    padding-top: 60px;
+  }
+</style>
+<script>
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { myFunction() };
+
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  let fontsize = 18;
+
+  function updateSize() {
+    if (fontsize >= 2 && fontsize <= 52) {
+      document.querySelector('body').style.fontSize = String(fontsize) + "px";
+      document.querySelector('.size-display').textContent = String(fontsize) + "px";
+    }
+  }
+  function sizePlus() {
+    fontsize++;
+    updateSize();
+  }
+  function sizeMinus() {
+    fontsize--;
+    updateSize();
+  }
+
+
+  updateSize();
+</script>
+
+</html>
