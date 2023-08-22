@@ -12,25 +12,23 @@
   <div id="navbar">
     <div id="navbar">
       <button>File-reader v1.1.0</button>
-      <button>Untitled Pizzeria Wiki: auto-clicker</button>
+      <button>Untitled Pizzeria Wiki: afk detector</button>
       <button onclick="sizePlus()">+</button>
       <button class="size-display">15</button>
       <button onclick="sizeMinus()">-</button>
     </div>
   </div>
   <div class="content">
-    <h1>Auto-clicker:</h1>
-    <p>This help page is being edited constantly, so make sure to come back every so often. Want to help out? Make edits on our github page! Simply create a new branch and pull request. Our team will periodically check the edits and approve or disapprove them. <a href="https://github.com/EF0601/untitled-pizzeria-wiki" style="color:blue;" target="_blank">GitHub</a></p><br><br>
+    <h1>Afk detector</h1>
+    <p>This help page is <b>locked</b> forever, and can only be edited by staff. All pull requests regarding this file will be denied.</p><br><br>
     <h2>Content</h2>
     <p>
-      <h3>General</h3>
-      The auto-clicker was added in version 0.3.0-beta. It performs the clicking motion of a player four times per second. It can focus on <b>one</b> factory button at a time. The button with the auto-clicker focused on will have a black outline. <br><br>
-      <h3>Activation</h3>
-      The auto-clicker can be activated by right-clicking a factory button. Disable all active auto-clickers by clicking the "clear auto-clicker" button. <br><br>
+    <h3>General</h3>
+    The auto-clicker was added in version 0.4.0-beta, which prompted the release of 1.0.0. It confirms that the player is playing the game, as the developers wanted to make sure people <i>enjoy</i> the game and not afk it.<br><br>The afk detector consists of two timers and a modal. The modal is activated after the first time finishes (10 minutes), which activates the second timer for 3 minutes, and when that timer ends the page is reloaded, quitting the game.
 
-      <h3>Video</h3>
-      <video width="50%" controls><source src="./media/autoclicker-untitled-pizzeria.mp4"></video>
-</p>
+    <h3>Media</h3>
+      <img src="./media/untitled-pizzeria-wiki-afk-page.png" alt="Error." width="50%">
+    </p>
     <a href="./welcome.html" style="color:blue;">Home</a><br>
     <button onclick="location.reload()">Reload File</button>
   </div>
@@ -67,10 +65,6 @@
     overflow: hidden;
     background-color: #333;
     font-family: monospace;
-  }
-
-  img{
-    width: 100%;
   }
 
   /* Navbar links */
@@ -150,4 +144,3 @@
 </script>
 
 </html>
-
